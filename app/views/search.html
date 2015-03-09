@@ -1,0 +1,12 @@
+<form id="search" action="javascript:void(0)">
+  <input type="text" id="query" placeholder="Search" ng-model="query">
+  <button type="submit" class="fa fa-search" ng-click="search()"></button>
+</form>
+<ul id="songlist" ng-if="songs.length">
+  <li ng-repeat="song in songs" ng-if="songs">
+    <a href="#/sing/{{song.media$group.yt$videoid.$t}}">
+      <img ng-src="http://img.youtube.com/vi/{{song.media$group.yt$videoid.$t}}/0.jpg"/>
+      <span>{{song.title.$t}}</span></a>
+  </li>
+</ul>
+<p ng-if="err" class="search-err">{{err}}</p>
