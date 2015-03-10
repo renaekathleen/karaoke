@@ -1,12 +1,10 @@
 # karaoke
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+I made a karaoke application using AngularJS, the Youtube search and iframe APIs, and utilizing the MediaStream web API.
 
-## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+#todo:
+* code cleanup
+* ui cleanup
+* playlist or queue
+* adjustable reverb for mic stream
