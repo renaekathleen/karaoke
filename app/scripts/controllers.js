@@ -8,6 +8,7 @@ angular.module('karaokeApp')
       'orderby': 'relevance',
       'alt': 'json',
       'max-results': 12,
+      'format': 5,
       'v': 2
     };
     $scope.search = function () {
@@ -37,7 +38,7 @@ angular.module('karaokeApp')
     var video = null;
     $scope.songId = $routeParams.songId;
     $scope.volume = 0.5;
-    $scope.step = 0.02;
+    $scope.step = 0.05;
     $scope.playerVars = {
       'controls': 0,
       'rel': 0
@@ -94,17 +95,18 @@ angular.module('karaokeApp')
           $scope.togglePlay();
           break;
         case 37:
-          if ($scope.volume > 0) {
-          $scope.volume -= $scope.step;
+          if ($scope.volume >= $scope.step) {
+            $scope.volume = Math.round(($scope.volume - $scope.step) * 100)/100;
           }
           break;
         case 39:
-          if ($scope.volume < 1) {
-            $scope.volume += $scope.step;
+          if ($scope.volume <= (1-$scope.step)) {
+            $scope.volume = Math.round(($scope.volume + $scope.step) * 100)/100;
           }
           break;
       }
       console.log($scope.volume);
+      $scope.adjustVolume();
       $scope.$apply();
     };
   });
