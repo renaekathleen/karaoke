@@ -1,12 +1,13 @@
-<audio id="voice" src=""></audio>
 <div id="video-loader" class="loader" ng-if="loading"></div>
 <youtube-video video-id="songId" player-vars="playerVars" player-width="960" player-height="540" player="video"></youtube-video>
-<button id="toggle-play" ng-click="togglePlay()">I'm Ready to Sing!</button>
+<button id="toggle-play" ng-click="togglePlay()" class="fa" ng-class="isPaused ? 'fa-play':'fa-pause'"></button>
 
-<input type="range" id="mixer" min="0" max="1" value="0.5" step="0.02" ng-change="adjustVolume()" ng-model="volume">
+<input type="range" id="mixer" min="0" max="1" value="0.5" step="{{step}}" ng-change="adjustVolume()" ng-model="volume">
 
 <div id="mixer-ui">
   <span class="label">Voice</span>
   <span id="indicator" style="width:{{(volume*100)}}%"></span>
   <span class="label">Video</span>
 </div>
+
+<p ng-if="err">{{err}}</p>

@@ -1938,80 +1938,93 @@ body {
   background: #222222;
   color: #eeeeee;
   font-family: sans-serif;
+  min-width: 960px;
+}
+body #content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 20px;
 }
-body a {
+body #content a {
   text-decoration: none;
   color: #eeeeee;
 }
-body form#search {
+body #content form#search {
   position: relative;
-  overflow: hidden;
 }
-body form#search input#query {
+body #content form#search input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body #content form#search input#query {
   height: 50px;
   font-size: 40px;
   line-height: 50px;
   width: 100%;
   border: 0 none transparent;
   padding: 0 10px;
+  height: 80px;
+  padding: 0 30px;
   background-color: #2f2f2f;
   color: #999999;
 }
-body form#search input#query ::-webkit-input-placeholder {
-  color: #666666;
+body #content form#search input#query ::-webkit-input-placeholder {
+  color: #444444;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
 }
-body form#search input#query::-moz-placeholder {
-  color: #666666;
+body #content form#search input#query::-moz-placeholder {
+  color: #444444;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
 }
-body form#search input#query::-webkit-input-placeholder {
-  color: #666666;
+body #content form#search input#query::-webkit-input-placeholder {
+  color: #444444;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
 }
-body form#search input#query:-moz-placeholder {
-  color: #666666;
+body #content form#search input#query:-moz-placeholder {
+  color: #444444;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
 }
-body form#search button.fa-search {
+body #content form#search button.fa-search {
   background: transparent none no-repeat;
   border: 0 none transparent;
   position: absolute;
-  color: #666666;
-  right: 7px;
-  top: 0;
+  color: #444444;
+  right: 20px;
+  top: 12px;
   font-size: 35px;
   line-height: 43px;
 }
-body ul#songlist {
+body #content ul#songlist {
   display: table;
   margin: auto;
+  text-align: center;
 }
-body ul#songlist li {
+body #content ul#songlist li {
   width: 400px;
   margin: 20px;
   height: 320px;
-  float: left;
+  display: inline-block;
   position: relative;
 }
-body ul#songlist li a {
+body #content ul#songlist li a {
   width: 100%;
   height: 100%;
   display: block;
 }
-body ul#songlist li a img {
+body #content ul#songlist li a img {
   width: 100%;
 }
-body ul#songlist li a span {
+body #content ul#songlist li a span {
   line-height: 20px;
   max-height: 40px;
   font-size: 14px;
@@ -2033,7 +2046,7 @@ body ul#songlist li a span {
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-body ul#songlist li a:hover span {
+body #content ul#songlist li a:hover span {
   height: auto;
   max-height: 320px;
   white-space: normal;
@@ -2042,25 +2055,25 @@ body ul#songlist li a:hover span {
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-body p.search-err {
+body #content p.search-err {
   margin-top: 30px;
   font-size: 30px;
   text-align: center;
 }
-body iframe {
-  margin: 0 auto 50px;
+body #content iframe {
+  margin: 0 auto 20px;
   display: block;
 }
-body .loader {
+body #content .loader {
   margin: auto;
   background: url(../images/loading.svg) center center no-repeat transparent;
   background-size: 100px auto;
 }
-body .loader#video-loader {
+body #content .loader#video-loader {
   height: 540px;
   width: 960px;
 }
-body #toggle-play {
+body #content #toggle-play {
   background-color: #3489c1;
   color: #fff;
   height: 50px;
@@ -2072,23 +2085,23 @@ body #toggle-play {
   line-height: 40px;
   height: 75px;
 }
-body #mixer {
+body #content #mixer {
   display: none;
 }
-body #mixer-ui {
+body #content #mixer-ui {
   width: 100%;
   height: 75px;
   background-color: #3489c1;
   position: relative;
-  margin-top: 50px;
+  margin-top: 20px;
 }
-body #mixer-ui #indicator {
+body #content #mixer-ui #indicator {
   display: block;
   height: 100%;
   width: 50%;
   background-color: #245e85;
 }
-body #mixer-ui .label {
+body #content #mixer-ui .label {
   position: absolute;
   height: 50px;
   font-size: 40px;
@@ -2101,7 +2114,7 @@ body #mixer-ui .label {
   left: 0;
   line-height: 83px;
 }
-body #mixer-ui .label:last-child {
+body #content #mixer-ui .label:last-child {
   right: 0;
   left: initial;
 }

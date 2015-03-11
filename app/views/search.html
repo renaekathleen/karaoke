@@ -6,7 +6,8 @@
   <li ng-repeat="song in songs" ng-if="songs">
     <a href="#/sing/{{song.media$group.yt$videoid.$t}}">
       <img ng-src="http://img.youtube.com/vi/{{song.media$group.yt$videoid.$t}}/0.jpg"/>
-      <span>{{song.title.$t}}</span></a>
+      <span>{{song.title.$t}}</span>
+    </a>
   </li>
 </ul>
 <p ng-if="err" class="search-err">{{err}}</p>
