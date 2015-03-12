@@ -1,5 +1,6 @@
 <div id="video-loader" class="loader" ng-if="loading"></div>
 <youtube-video video-id="songId" player-vars="playerVars" player-width="960" player-height="540" player="video"></youtube-video>
+<div class="screen" ng-click="togglePlay()"></div>
 <button id="toggle-play" ng-click="togglePlay()" class="fa" ng-class="isPaused ? 'fa-play':'fa-pause'"></button>
 
 <input type="range" id="mixer" min="0" max="1" value="0.5" step="{{step}}" ng-change="adjustVolume()" ng-model="volume">

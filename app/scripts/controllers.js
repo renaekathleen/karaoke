@@ -53,7 +53,7 @@ angular.module('karaokeApp')
 
     $scope.adjustVolume = function () {
       video.setVolume(($scope.volume) * 100);
-      voice.volume = 1 - $scope.volume;
+      $rootScope.voice.volume = 1 - $scope.volume;
     };
 
     $scope.togglePlay = function () {
@@ -65,7 +65,6 @@ angular.module('karaokeApp')
         video.pauseVideo();
         $scope.isPaused = true;
       }
-      console.log($scope.isPaused);
     };
 
     $scope.$on('youtube.player.ready', function ($event, player) {

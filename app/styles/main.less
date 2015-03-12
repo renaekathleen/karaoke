@@ -17,6 +17,7 @@ body {
   font-family: sans-serif;
   min-width: 960px;
   #content {
+    posiiton: relative;
     .box-sizing();
     padding: 20px;
     a {
@@ -103,13 +104,19 @@ body {
       margin: 0 auto 20px;
       display: block;
     }
+    .screen {
+      .vidDimensions;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      margin-left: -480px;
+    }
     .loader {
       margin: auto;
       background: url(../images/loading.svg) center center no-repeat transparent;
       background-size: 100px auto;
       &#video-loader {
-        height: 540px;
-        width: 960px;
+        .vidDimensions;
       }
     }
     #toggle-play {

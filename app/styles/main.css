@@ -1934,6 +1934,10 @@ a img {
   border: 0 none transparent;
   padding: 0 10px;
 }
+.vidDimensions {
+  height: 540px;
+  width: 960px;
+}
 body {
   background: #222222;
   color: #eeeeee;
@@ -1941,6 +1945,7 @@ body {
   min-width: 960px;
 }
 body #content {
+  posiiton: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2063,6 +2068,14 @@ body #content p.search-err {
 body #content iframe {
   margin: 0 auto 20px;
   display: block;
+}
+body #content .screen {
+  height: 540px;
+  width: 960px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -480px;
 }
 body #content .loader {
   margin: auto;

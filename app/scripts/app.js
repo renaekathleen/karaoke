@@ -23,7 +23,7 @@ karaoke.config(['$routeProvider', function ($routeProvider) {
 
 karaoke.run(function($rootScope){
 
-  var voice = document.querySelector('#voice');
+  $rootScope.voice = document.querySelector('#voice');
   navigator.getUserMedia = ( navigator.getUserMedia ||
   navigator.webkitGetUserMedia ||
   navigator.mozGetUserMedia ||
@@ -36,10 +36,9 @@ karaoke.run(function($rootScope){
         audio: true
       },
       function (localMediaStream) {
-        //$rootScope.stream = window.URL.createObjectURL(localMediaStream);
-        voice.src =window.URL.createObjectURL(localMediaStream);
-        voice.volume = 0.5;
-        voice.play();
+        $rootScope.voice.src = window.URL.createObjectURL(localMediaStream);
+        $rootScope.voice.volume = 0.5;
+        $rootScope.voice.play();
       },
       function (err) {
         console.log('The following error occurred: ', err);
